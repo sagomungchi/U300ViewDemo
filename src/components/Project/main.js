@@ -5,7 +5,6 @@ import Carousel from "react-bootstrap/Carousel";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Media from "react-bootstrap/Media";
 
-
 class Main extends Component {
     render() {
         return (
@@ -134,7 +133,10 @@ class Main extends Component {
                         />
                         <Media.Body style={{paddingLeft: '20px', paddingRight: '450px'}}>
                             <h2>고양이는 왜 생선을 버리고 샴푸를 물고 갔을까요?</h2>
-                            <h7><ProgressBar  style={{color:"black",width: '520px'}} color='success' variant="custom" label="120,000/1,000,000" now={12}/>
+                            <h7>
+
+                                <ProgressBar style={{color:"black",width: '520px'}} color='success' variant="custom" label="120,000/1,000,000" now={12}/>
+
                             </h7>
                             <h6>(12%/100.0%)</h6>
                             <h6 style={{width: '500px'}}>

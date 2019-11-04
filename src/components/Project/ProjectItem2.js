@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link,  Route} from "react-router-dom";
 import EachProject from "./EachProject";
 import ProgressBar from "react-bootstrap/ProgressBar";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/esm/Col";
 
 class ProjectItem2 extends Component {
     render() {
@@ -11,9 +13,12 @@ class ProjectItem2 extends Component {
         const progress=52;
         const money=progress*10000;
         const src="https://tumblbug-pci.imgix.net/6e9a642e6e4d5d647835e62e1f0158aec00ba4ff/bdc47ec250c59b428791d00b2654046ae0112607/3adf5cc0d9449bb8f0cfd7e3c4f490d6df51d76f/2e767912-3d65-4b23-acf0-c29b9edc9e2d.png?ixlib=rb-1.1.0&w=1240&h=930&auto=format%2Ccompress&lossless=true&fit=crop&s=3d7327f489af4693ac78eb0fc90279f9"
+        const mentorsrc="https://www.gotit.co.kr/wp-content/uploads/2018/10/origin_%EC%9E%90%EC%9A%B0%EB%A6%BC%EA%B9%80%EC%9C%A4%EC%95%84%EC%9C%A0%EB%AA%85%EC%B6%9C%ED%8C%90%EC%82%AC%EA%B0%80%EC%82%AC%EB%AC%B4%EB%8B%A8%EB%8F%84%EC%9A%A9%EB%AC%B8%EC%A0%9C%EC%A0%9C%EA%B8%B0-1.jpg"
+        const mentorname="김윤아";
+        const mentorcomment="색다른 재즈 콘서트, 티켓사서 들으세요";
         return (
             <div className="container">
-                <Link to={"/eachProject/"+company} style={{color:'black'}} className="card card-body bg-light mb-3">
+                <Link to={"/eachProject/"+company+"/"+project+"/"+content+"/"+progress+"/"+mentorname+"/"+mentorcomment+"/img2"+"/mimg2"} style={{color:'black'}} className="card card-body bg-light mb-3">
                     <div className="row">
                         <div className="col-2">
                             <span className="mx-auto"><img src={src}></img></span>
@@ -24,7 +29,18 @@ class ProjectItem2 extends Component {
                         </div>
                         <div className="col-md-4 d-none d-lg-block">
                             <ProgressBar now={progress} label={(money)+"/1000000"}/>
-                            <Route path={'/eachProject/:name'} as="asd" component={EachProject}/>
+                            <Row style={{paddingTop:'20px'}}>
+                                <Col>
+                                    <img style={{width:'128px',height:'100px'}} src={mentorsrc}></img></Col>
+                                <Col>
+                                    <h3>mentor</h3>
+                                    <h5>{mentorname}</h5>
+                                    <h7>놀라워요!</h7>
+                                    <h5>★★★★</h5>
+                                </Col>
+
+                            </Row>
+                            <Route path={'/eachProject/:name/:name2/:content/:progress/:mentorname/:mentorcomment/:img/:mimg'} as="asd" component={EachProject}/>
                         </div>
                     </div>
                 </Link>

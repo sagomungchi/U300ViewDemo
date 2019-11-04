@@ -33,14 +33,13 @@ class Dashboard extends Component {
                             </Row>
                             <br/>
                             <hr/>
-                            <ProjectItem1/>
+
                             <ProjectItem4/>
                             <ProjectItem2/>
                             <ProjectItem5/>
                             <ProjectItem6/>
                             <ProjectItem3/>
-
-
+                            <ProjectItem1/>
                         </div>
                     </div>
                 </div>

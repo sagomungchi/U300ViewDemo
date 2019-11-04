@@ -18,8 +18,8 @@ class Header extends Component {
                             </ul>
                             <ul className="navbar-nav mr-auto">
                                 <li className="nav-item">
-                                    <a  style={{marginLeft:'30px', marginTop:'7px'}} className="nav-link" href="/dashboard">
-                                        Add Project
+                                    <a  style={{marginLeft:'30px', marginTop:'7px'}} className="nav-link" href="/addproject">
+                                        Mentor
                                     </a>
                                 </li>
                             </ul>
